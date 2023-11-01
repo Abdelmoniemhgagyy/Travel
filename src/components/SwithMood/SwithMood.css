@@ -1,0 +1,18 @@
+.dark {
+  --main-color:#000;
+  /* --secondary-color:#fff; */
+  --gradient-color: linear-gradient(to right, #232526, #414345);
+  --background-color:black;
+  --primary-color:#fff;
+}
+.main-container-mood{
+  position: absolute;
+  right: 50px;
+  top: 21px;
+  z-index: 999;
+  transition:.3s;
+  cursor: pointer;
+}
+.main-container-mood i {
+  color: #fff;
+}

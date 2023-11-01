@@ -1,0 +1,129 @@
+.main-title{
+  position: relative;
+  top: 130px;
+  left: 24px;
+  width: fit-content;
+  color: var(--primary-color);
+}
+
+.main-title span {
+  border-bottom:3px solid var(--secondary-color);
+}
+.tour-items{
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(380px,1fr));
+  gap: 20px;
+  
+}
+
+.tour-item{
+ width: 370px;
+ /* border: 1px solid var(--secondary-color); */
+ box-shadow: 0 0 10px #333;
+ margin: 10px auto;
+ border-radius:10px;
+ overflow: hidden;
+}
+.dark{
+  .tour-item{
+    box-shadow: 0 0 10px #9e9e9e;
+   }
+   .tour-info{
+    color: rgb(0, 170, 212);
+  }
+  .location-tour{
+    color:var(--primary-color)
+  }
+}
+@media(max-width:540px){
+  .tour-item{
+    width: 80%;
+    
+  }
+}
+.tour-item img {
+  width: 100%;
+  height: 200px;
+  transition: .3s;
+
+
+}
+.tour-item img:hover {
+      transform: scale(1.1);
+}
+.tour-info{
+  padding: 10px;
+  line-height: 1.6;
+  color: rgb(0, 87, 109);
+}
+.tour-item hr {
+  margin: 10px 0 ;
+  background-color: #333;
+}
+.location-tour{
+  color: #333;
+}
+.location-tour>i {
+  margin-right:5px ;
+}
+.cultural-and-price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cultural p{
+  text-transform: uppercase;
+}
+.relax-number{
+  color: #fff;
+  border-radius: 11px;
+  background: rgb(27,137,161);
+  background: var(--gradient-color);
+  cursor: pointer;
+  display: inline-block;
+  width: 33px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 7px;
+}
+.tour-price{
+  font-size: 20px;
+}
+.item-details{
+  width: 110px;
+  padding: 10px;
+  margin: 10px 10px 5px 10px ;
+  border: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 20px;
+  background: rgb(27,137,161);
+  background: var(--gradient-color);
+  cursor: pointer;
+}
+.item-details i{
+  margin-left:7px;
+}
+
+.numbers_of_pages{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 15px auto ;
+}
+
+.number_of_page{
+  padding: 6px;
+  background-color: var(--main-color);
+  margin-left: 3px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.active-item{
+  background-color: var(--secondary-color);
+}

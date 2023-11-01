@@ -1,0 +1,139 @@
+.header-container{
+    background-color: var(--main-color);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 5px ;
+}
+.header-container .logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+    margin-left: 40px;
+    cursor: pointer;
+    
+}
+.header-container .logo img {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px 0 20px ;
+}
+
+.header-container .logo h2 {
+    color:var(--secondary-color)
+}
+/* ----------navbar------------ */
+nav{
+    flex: 4;
+}
+nav .navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+   
+
+}
+.navbar li{
+    transition: .1s;
+}
+.navbar li:hover{
+    color: var(--main-color);
+    background-color: #777;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    position: relative;
+}
+
+.navbar li::after {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 0%;
+    background-color: rgb(22, 201, 255);
+    height: 3px;
+    transition: all .6s
+}
+.navbar li:hover:after {
+    width: 100%;
+}
+
+.navbar li a {
+    margin: 0 20px;
+    color: #fff;
+
+}
+/* ------btn-book-now-- */
+
+.btn-book-now{
+    padding: 10px;
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    margin-left: 20px;
+    border-radius: 20px;
+    background: rgb(27,137,161);
+    background: var(--gradient-color);
+    cursor: pointer;
+}
+/* ---------------------------- */
+
+.bi-list{
+    display: none;
+}
+.bi-x-lg{
+    display: none;
+}
+@media(max-width:870px){
+    .header-container .logo{
+        margin-left: 10px;
+    }
+    nav{
+        position: absolute;
+        text-align: center;
+        top:0%;
+        left: 50%;
+        transform: translate(-50%,-150%);
+        transition: .7s ;
+        z-index: 99999;
+
+    }
+    .bi-list,
+    .bi-x-lg{
+        display: block;
+        font-size: 30px;
+        color: #fff;
+        position: absolute;
+        right: 15px;
+        top:10px;
+        cursor: pointer;
+    }
+    .bi-x-lg{
+        color: red;
+    }
+   .navbar{
+        display:flex;
+        flex-wrap: wrap;
+        background-color: #777;
+        flex-direction: column;
+        width: 90vw;
+        border-radius: 16px;
+    }
+    .navbar li{
+       padding: 10px;
+    }
+    .navbar li:hover{
+        color: var(--main-color);
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .btn-book-now{
+        margin: 10px auto;
+    }
+}
